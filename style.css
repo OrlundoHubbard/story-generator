@@ -34,4 +34,36 @@ form {
 label {
     flex-basis: 100%;
     font-size: 1.2rem;
+    margin-bottom: 5px;
+}
+
+input[type="text"] {
+    flex-basis: 80%;
+    font-size: 1.2rem;
+    padding: 10px;
+    border-radius: 5px;
+    border: none; 
+    margin-right: 10px;
+}
+
+button[type="submit"] {
+    flex-basis: 18%;
+    font-size: 1.2rem;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: #4285f4;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button[type="submit"]:hover {
+    background-color: #3367d6;
+}
+
+#story-container {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    margin-top: 20px;
 }
