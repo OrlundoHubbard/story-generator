@@ -9,5 +9,13 @@ form.addEventListener('submit', (event) => {
 });
 
 async function generateStory(prompt) {
-    
+    const response = await axios.post('https://api.openai.com/v1/engines/davinci/story', {
+        prompt: prompt, 
+        max_tokens: 1024,
+        n: 1,
+        stop: "\n\n"
+    }, {
+        "Content-Type": "application/json",
+        "Authorization": `Bearer ${process.env.OPENAI_API_KEY}`
+    });
 }
