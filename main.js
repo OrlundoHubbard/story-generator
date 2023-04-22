@@ -1,3 +1,5 @@
+import axios from "axios";
+
 const form = document.getElementById('story-form');
 const promptInput = document.getElementById('prompt');
 const storyContainer = document.getElementById('story-container');
@@ -18,4 +20,7 @@ async function generateStory(prompt) {
         "Content-Type": "application/json",
         "Authorization": `Bearer ${process.env.OPENAI_API_KEY}`
     });
+
+    const story = response.data.choices[0].text.trim();
+    storyContainer.textContent = story;
 }
