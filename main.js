@@ -1,4 +1,7 @@
-import axios from "axios";
+import * as axios from './node_modules/axios/dist/axios.min.js';
+import dotenv from 'dotenv-browser';
+
+dotenv.config();
 
 const form = document.getElementById('story-form');
 const promptInput = document.getElementById('prompt');
